@@ -57,7 +57,7 @@ export class UserService {
       return 'bellomichel12@gmail.com';
     }
     if(user ==  'esencialpack'){
-      return 'p.oriente@gmail.com';
+      return 'p.oriente2@gmail.com';      
     }    
     else{
       return 'false';
