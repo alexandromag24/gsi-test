@@ -63,6 +63,8 @@ export class EditProductComponent implements OnInit {
     this.product.productCategory = this.products[0].category;
     this.product.productDescription = this.products[0].description;
     this.product.productAgency = this.products[0].productAgency;
+    this.product.productAgencys = this.products[0].productAgencys;
+    this.product.productProvinces = this.products[0].productProvinces;
     this.img = this.products[0].picture._url;
     this.agencys = this.products[0].productAgencys;
     this.provincesProduct = this.products[0].productProvinces;
@@ -150,10 +152,12 @@ export class EditProductComponent implements OnInit {
       reader.readAsDataURL(event.target.files[0]);
       reader.onload = event => {
         this.img = reader.result;
+        console.log(this.img.toString())
       };
     }
   saveProduct(form: NgForm){
     if(form.valid){
+      this.service.edit = true;
       this.product.productAgencys = this.agencys;
       this.product.productProvinces = this.provincesProduct;
       this.service.updateProduct(this.productsA[0].id, this.product, this.img.toString(), this.dataSource);

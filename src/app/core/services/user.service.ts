@@ -57,13 +57,7 @@ export class UserService {
       return 'bellomichel12@gmail.com';
     }
     if(user ==  'esencialpack'){
-      return 'p.oriente2@gmail.com';      
-    }    
-    if(user ==  'franklin'){
-      return 'elkioskitocuba@gmail.com';      
-    }    
-    if(user ==  'domiciliohabana'){
-      return 'domiciliohavana@gmail.com';      
+      return 'p.oriente@gmail.com';
     }    
     else{
       return 'false';

@@ -85,7 +85,7 @@
       required
       >
     </label>
-    <label>
+    <label *ngIf="order.orderAgency != 'patugente'">
       <span>Municipio </span>
       <input type="text"
       class="form-control"
@@ -97,7 +97,7 @@
       name="orderMunicipio"
       #orderMunicipio = "ngModel">
     </label>
-    <label>
+    <label *ngIf="order.orderAgency != 'patugente'">
       <span>Dirección </span>
       <input type="text"
       class="form-control"
@@ -110,7 +110,7 @@
       #orderAddress = "ngModel">
 
     </label>
-    <label>
+    <label *ngIf="order.orderAgency != 'patugente'">
       <span>Referencia</span>
       <input type="text"
       class="form-control"
@@ -138,14 +138,6 @@
       placeholder="Número de teléfono"
       name="orderMobile"
       #orderMobile = "ngModel">
-
-
-
-
-
-
-
-
     </label>
     <label>
       <span>Teléfono Fijo</span>
@@ -200,6 +192,17 @@
 </option>
 </select>
     </label>
+    <div *ngIf="order.orderAgency == 'patugente'">
+      <span>Factura </span>
+    <a class="col-4"  [href]='pdf' target="_blank">
+      <i class="fa fa-file-pdf-o fa-5x"></i>
+      <!-- <img class="mb-3" src='https://academy.leewayweb.com/wp-content/uploads/2017/05/pdf.png'  width="160" height="160" /> -->
+    </a>
+    </div>
+    
+
+
+
     <label *ngIf="admin && (user!='buttycomercial' && user!='comercial') &&  !(order.state == 'Revisado' || order.state == 'Cancelado')">
       <span>Sucursal</span>
       <select  [(ngModel)]="order.orderSucursal"
@@ -259,7 +262,7 @@
 
   </div>
 
-  <div class="col-lg-6">
+  <div class="col-lg-6" *ngIf="order.orderAgency != 'patugente'">
     <table>
       <tr>
         <th colspan="2">Productos</th>
@@ -287,7 +290,7 @@
       <div class="col-lg-6">
         <button type="submit" >Actualizar Pedido</button>
       </div>
-      <div class="col-lg-6" *ngIf="(admin || sucursal)">
+      <div class="col-lg-6" *ngIf="(admin || sucursal) && order.orderAgency != 'patugente'">
         <button type="submit" class="print__factura" (click)="print()">Imprimir Factura</button>
       </div>
 
