@@ -4,9 +4,9 @@
 
 export const environment = {
   production: true,
-  PARSE_APP_ID: 'dbbuttymanag',
-  PARSE_JS_KEY: '88030911379',
-  serverURL: 'https://dbbuttymanag.herokuapp.com/parse'
+  PARSE_APP_ID: 'buttybd8803',
+  PARSE_JS_KEY: '880309113002021',
+  serverURL: 'https://buttyparse.herokuapp.com/parse'
 };
 
 // -- DEV
