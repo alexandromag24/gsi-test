@@ -35,6 +35,12 @@
         </div>
         <span>Añadir Productos</span>
       </div>
+      <div class="links" [routerLink]="['/list-category']" (click)="openMenu()" *ngIf="admin && !sucursal && !isComercial()">
+        <div class="icon">
+          <i class="fa fa-sliders"></i>
+        </div>
+        <span>Categorías de Productos</span>
+      </div>
      <div class="links" [routerLink]="['/reports']"  (click)="openMenu()" *ngIf="admin && !isComercial()">
       <div class="icon">
         <i class="fa fa-bar-chart"></i>

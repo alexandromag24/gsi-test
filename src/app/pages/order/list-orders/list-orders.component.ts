@@ -185,7 +185,9 @@ export class ListOrdersComponent implements OnInit {
           this.loading = false;
           this.sucursal = this.userService.isSucursal(this.user);
 
-          if (this.admin || this.sucursal) {
+          if (this.user == 'sucursalesp') {
+            this.displayedColumns = ['id', 'date', 'client', 'products', 'reciver', 'province', 'municipio', 'mobile', 'phone', 'state', 'accions'];
+          } else if (this.admin || this.sucursal) {
             this.displayedColumns = ['id', 'date', 'agency', 'client', 'products', 'reciver', 'province', 'municipio', 'mobile', 'phone', 'state', 'accions'];
           } else {
             this.displayedColumns = ['id', 'date', 'client', 'products', 'reciver', 'province', 'municipio', 'mobile', 'phone', 'state', 'accions'];

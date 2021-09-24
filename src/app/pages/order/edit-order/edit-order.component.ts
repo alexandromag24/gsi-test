@@ -168,7 +168,7 @@ sendEmail(){
 
   print(){
     this.router.navigate(['/b']);
-    this.router.navigateByUrl('/print-view', { state: {order: this.order}});
+    this.router.navigateByUrl('/print-view', { state: {order: this.order, user: this.user}});
   }
 
 }

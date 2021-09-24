@@ -22,6 +22,8 @@ import { ListComplainComponent } from './pages/complain/list-complain/list-compl
 import { EditProvinceComponent } from './pages/province/edit-province/edit-province.component';
 import { EditTransportComponent } from './pages/transport/edit-transport/edit-transport.component';
 import { SucursalComponent } from './pages/sucursal/sucursal.component';
+import { ListCategoryComponent } from './pages/product/list-category/list-category.component';
+import { AddCategoryComponent } from './pages/product/add-category/add-category.component';
 
 const routes: Routes = [
 
@@ -32,6 +34,14 @@ const routes: Routes = [
   { path: 'add-product', component: AddProductComponent},
   { path: 'edit-product', component: EditProductComponent},
   { path: 'create-combo', component: CreateComboComponent},
+  {
+    path: 'list-category', component: ListCategoryComponent
+   
+  },
+  {
+    path: 'add-category', component: AddCategoryComponent
+    
+  },
   //-- Order --//
   { path: 'orders', component: ListOrdersComponent},
   { path: 'orders-completed', component: ListCompletedOrderComponent},

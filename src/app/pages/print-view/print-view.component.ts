@@ -12,6 +12,7 @@ import { ProductView } from 'src/app/core/models/product-view';
 })
 export class PrintViewComponent implements OnInit {
   orders: Order = new Order();    
+  user: string;
   dateS: string;
   displayedColumns: string[] ;
   dataSource: any[] = [];
@@ -26,9 +27,11 @@ export class PrintViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.orders = history.state.order;
+    this.user = history.state.order;
     this.nameProduct = history.state.order.productArray[0].name;
     this.data();
     console.log(this.orders);
+    console.log(this.user);
     
   }
 
