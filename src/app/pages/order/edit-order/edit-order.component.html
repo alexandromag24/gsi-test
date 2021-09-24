@@ -34,7 +34,7 @@
       name="orderId"
       #orderId = "ngModel">
     </label>
-    <label>
+    <label *ngIf="user != 'sucursalesp'">
       <span class="fname">Agencia </span>
       <input type="text"
       disabled

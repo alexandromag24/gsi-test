@@ -27,7 +27,7 @@ export class PrintViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.orders = history.state.order;
-    this.user = history.state.order;
+    this.user = history.state.user;
     this.nameProduct = history.state.order.productArray[0].name;
     this.data();
     console.log(this.orders);

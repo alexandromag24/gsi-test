@@ -17,7 +17,7 @@
 
 
     <div class="print__middle mt-5">
-        <div *ngIf="!(user == 'sucursalesp')">
+        <div *ngIf="user != 'sucursalesp'">            
             <b>Agencia: </b> {{orders.orderAgency  | uppercase}}
         </div>
         <div>
