@@ -189,11 +189,13 @@ export class ListCompletedOrderComponent implements OnInit  {
             this.loading = false;
              this.sucursal = this.userService.isSucursal(this.user);
 
-             if(this.admin || this.sucursal){
-                  this.displayedColumns =  ['id', 'date', 'agency', 'client', 'products', 'reciver', 'province', 'municipio','mobile','phone', 'state', 'accions'];
-             }else{
-              this.displayedColumns =  ['id', 'date', 'client', 'products', 'reciver', 'province', 'municipio','mobile','phone', 'state', 'accions'];
-             }
+             if (this.user == 'sucursalesp') {
+              this.displayedColumns = ['id', 'date', 'client', 'products', 'reciver', 'province', 'municipio', 'mobile', 'phone', 'state', 'accions'];
+            } else if (this.admin || this.sucursal) {
+              this.displayedColumns = ['id', 'date', 'agency', 'client', 'products', 'reciver', 'province', 'municipio', 'mobile', 'phone', 'state', 'accions'];
+            } else {
+              this.displayedColumns = ['id', 'date', 'client', 'products', 'reciver', 'province', 'municipio', 'mobile', 'phone', 'state', 'accions'];
+            }
              if (this.orderService.edit) {
               this.searchValue = this.orderService.values;
               this.searchCondition = this.orderService.conditions;
