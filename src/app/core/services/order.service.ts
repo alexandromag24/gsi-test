@@ -108,7 +108,7 @@ export class OrderService {
           myNewObject.set('orderNote', order.orderNote);
           myNewObject.set('orderCancelMotive', order.orderCancelMotive);
           myNewObject.set('state', order.state);
-          if (hasAlbaran && order.state != 'Finalizado' && img != 'https://bulma.io/images/placeholders/480x480.png') {
+          if (hasAlbaran && order.state != 'Finalizado' && (img != 'https://bulma.io/images/placeholders/480x480.png' && img != 'http://buttyparse.herokuapp.com/parse/files/buttybd8803/4a8c781e7ebd7179677e6ab110914579_3b4e631189ab7135ce9a88c6d0385dab_product.png')) {
             myNewObject.set('orderAlbaran', new Parse.File("albaranes.jpg", { uri: img }));
             console.log("Poniendo albaran");
 
